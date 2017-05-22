@@ -1,3 +1,152 @@
 body{
-	background-color: black;
+	background-color: #09152F;
+	height: 2000px;
+}
+
+.box{
+	display: inline-block; /*caja-dos queda detrás porque su posición es relativa*/
+	width: 200px;
+	height: 200px;
+	font-size: 90px;
+	text-align: center;
+	color: whitesmoke;
+	line-height: 200px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+.caja{
+	background-color: #D986D6;
+	position: relative; /*la caja se mueve solo si le doy valores a top, bot, left, right*/
+	top: 20px;
+	left: 100px;
+}
+
+.caja-dos{
+	background-color: #B0C431;
+	position: relative;
+	right: 201.5px;
+}
+
+.caja-tres{
+	background-color: #461938; /*queda a la derecha porque las cajas anteriores siguen ocupando su espacio*/
+}
+
+/*Absolutas*/
+.absolutas{
+	border: 10px solid #B0C431;
+	width: 90%;
+	height: 250px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.abso-uno{
+	background-color: #461938;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.cont-abso{
+	border: 10px solid #A52757;
+}
+
+.abso-dos{
+	background-color: #D986D6;
+	position: absolute;
+	top: 100%;
+	left: 200px;
+}
+
+/*hijo absoluto padre relativo */
+
+/*Fixed*/ /*position fixed siempre es con respecto al navegador*/
+.fija-uno{
+	background-color: #B0C431;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.fija-uno span{
+	background-color: #461938;
+	line-height: 18px;
+	font-size: 18px;
+	display: block;
+	padding: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 20px;
+}
+
+.fija-dos{
+	background-color: #A52757;
+	position: fixed;
+}
+
+.caja-cool{
+	width: 400px;
+	height: 300px;
+	background-image: url();
+	background-size: cover;
+	position: relative;
+}
+
+.caja-cool span{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background-color: rgba(65,186,175,0.8);
+	display: block; /*si no no acepta padding*/
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid whitesmoke;
+}
+
+.caja-cool span i{
+	color: whitesmoke;
+	font-size: 26px;
+}
+
+.ice-cream{
+	position: fixed;
+	top: 400px;
+
+}
+.sabor-uno, .sabor-dos{
+	background-color: #41BAAF;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.sabor-uno{
+	position: relative;
+	top: 75px;
+	z-index: 2; /*profundidad*/
+}
+
+.sabor-dos{
+	background-color: #D986D6;
+	position: relative;
+	top: 35px;
+}
+
+.cono{
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 200px solid #e6bb78;
+}
+
+.cereza{
+	background-color: #A52757;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: relative;
+	left: 0px;
 }
